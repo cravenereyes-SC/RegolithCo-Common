@@ -12,11 +12,13 @@ id_rsa
 .stack.*
 .data
 
-# Ignore dist folders
+# Build output
 dist
+dist_esnext
+
+# Yarn
 .nx
 .npmrc
-
 .yarn/*
 .yarn/cache
 !.yarn/patches
@@ -25,6 +27,14 @@ dist
 !.yarn/sdks
 .yarn/versions
 
-NOT_COMMITTED
+# IDE
+*.swp
+*.swo
+*~
 
-dist_esnext
+# OS files
+.DS_Store
+Thumbs.db
+
+# Not committed
+NOT_COMMITTED
