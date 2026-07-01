@@ -13,8 +13,8 @@
     "npm.packageManager": "yarn",
     "eslint.nodePath": ".yarn/sdks",
     "window.title": "${rootName}${separator}${activeEditorShort}",
-    "typescript.tsdk": "🏠 Home/.yarn/sdks/typescript/lib",
-    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "js/ts.tsdk.path": "🏠 Home/.yarn/sdks/typescript/lib",
+    "js/ts.tsdk.promptToUseWorkspaceVersion": true,
     "workbench.colorCustomizations": {
 			"titleBar.activeBackground": "#630068",
       "sideBar.background": "#322130",
