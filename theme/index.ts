@@ -9,7 +9,16 @@
  */
 
 // Export theme configuration
-export { starCitizenTheme, themeUtils, type ThemeProps, type ButtonProps, type CardProps } from './theme';
+export {
+  starCitizenTheme,
+  themeUtils,
+  createThemeVariables,
+  applyThemeToElement,
+  applyThemeToDocument,
+  type ThemeProps,
+  type ButtonProps,
+  type CardProps,
+} from './theme';
 
 // Export React hooks and components
 export {

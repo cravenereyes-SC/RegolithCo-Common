@@ -47,6 +47,7 @@
       "**/*.egg-info": true
     },
     "jest.jestCommandLine": "npx jest",
+    "powershell.cwd": "🏠 @regolithco/common",
   },
   "extensions": {
     "recommendations": [

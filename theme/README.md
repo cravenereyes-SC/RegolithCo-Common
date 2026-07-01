@@ -42,6 +42,24 @@ A comprehensive futuristic UI theme inspired by the Star Citizen game aesthetic,
 
 ## Usage
 
+### Apply the theme globally
+Wrap your app with the theme provider to push the full theme palette onto the document root so all UI elements inherit it:
+
+```tsx
+import React from 'react'
+import { ThemeProvider } from '@regolithco/common/theme'
+
+export function App() {
+  return (
+    <ThemeProvider>
+      <YourApp />
+    </ThemeProvider>
+  )
+}
+```
+
+You can also target a specific container element by passing a `target` prop.
+
 ### CSS File
 Import the CSS file in your project:
 

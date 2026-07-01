@@ -4,19 +4,34 @@
  */
 
 import React from 'react';
-import { starCitizenTheme, themeUtils } from './theme';
+import { applyThemeToElement, starCitizenTheme, themeUtils } from './theme';
 
 /**
  * Create a theme context
  */
 export const ThemeContext = React.createContext(starCitizenTheme);
 
+export interface ThemeProviderProps {
+  children: React.ReactNode;
+  theme?: typeof starCitizenTheme;
+  target?: HTMLElement | null;
+}
+
 /**
  * Provider component to wrap your app
  */
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, theme = starCitizenTheme, target }) => {
+  React.useEffect(() => {
+    const root = target ?? (typeof document !== 'undefined' ? document.documentElement : null)
+
+    if (root) {
+      applyThemeToElement(theme, root)
+      root.setAttribute('data-theme', 'star-citizen')
+    }
+  }, [theme, target])
+
   return (
-    <ThemeContext.Provider value={starCitizenTheme}>
+    <ThemeContext.Provider value={theme}>
       {children}
     </ThemeContext.Provider>
   );

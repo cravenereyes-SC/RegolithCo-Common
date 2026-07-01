@@ -168,6 +168,70 @@ export const starCitizenTheme = {
 /**
  * Theme utilities for React components
  */
+export const createThemeVariables = (theme: typeof starCitizenTheme = starCitizenTheme): Record<string, string> => ({
+  '--sc-primary-bright': theme.colors.primary.bright,
+  '--sc-primary-teal': theme.colors.primary.teal,
+  '--sc-primary-dark-teal': theme.colors.primary.darkTeal,
+  '--sc-secondary-darkest': theme.colors.secondary.darkest,
+  '--sc-secondary-dark': theme.colors.secondary.dark,
+  '--sc-secondary-medium': theme.colors.secondary.medium,
+  '--sc-secondary-light': theme.colors.secondary.light,
+  '--sc-accent-orange': theme.colors.accent.orange,
+  '--sc-accent-gold': theme.colors.accent.gold,
+  '--sc-accent-red': theme.colors.accent.red,
+  '--sc-accent-green': theme.colors.accent.green,
+  '--sc-neutral-white': theme.colors.neutral.white,
+  '--sc-neutral-light': theme.colors.neutral.light,
+  '--sc-neutral-medium': theme.colors.neutral.medium,
+  '--sc-neutral-dark': theme.colors.neutral.dark,
+  '--sc-gradient-primary': theme.gradients.primary,
+  '--sc-gradient-dark': theme.gradients.dark,
+  '--sc-gradient-accent': theme.gradients.accent,
+  '--sc-font-primary': theme.fonts.primary.family,
+  '--sc-font-secondary': theme.fonts.secondary.family,
+  '--sc-shadow-glow-cyan': theme.shadows.glowCyan,
+  '--sc-shadow-glow-orange': theme.shadows.glowOrange,
+  '--sc-shadow-elevation': theme.shadows.elevation,
+  '--sc-spacing-xs': theme.spacing.xs,
+  '--sc-spacing-sm': theme.spacing.sm,
+  '--sc-spacing-md': theme.spacing.md,
+  '--sc-spacing-lg': theme.spacing.lg,
+  '--sc-spacing-xl': theme.spacing.xl,
+  '--sc-spacing-2xl': theme.spacing['2xl'],
+})
+
+export const applyThemeToElement = (
+  theme: typeof starCitizenTheme = starCitizenTheme,
+  target?: HTMLElement | null,
+): Record<string, string> => {
+  const variables = createThemeVariables(theme)
+
+  if (!target) {
+    return variables
+  }
+
+  Object.entries(variables).forEach(([name, value]) => {
+    target.style.setProperty(name, value)
+  })
+
+  return variables
+}
+
+export const applyThemeToDocument = (
+  theme: typeof starCitizenTheme = starCitizenTheme,
+  target?: HTMLElement | null,
+): HTMLElement | null => {
+  if (typeof document === 'undefined') {
+    return null
+  }
+
+  const root = target ?? document.documentElement
+  applyThemeToElement(theme, root)
+  root.setAttribute('data-theme', 'star-citizen')
+
+  return root
+}
+
 export const themeUtils = {
   /**
    * Get a color value from the theme
