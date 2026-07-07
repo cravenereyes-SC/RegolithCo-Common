@@ -1,16 +1,16 @@
-# @regolithco/common
+# Salvage Tracker
 
 Shared types, utilities, and GraphQL schema for the [Regolith Co.](https://regolith.rocks) mining companion app for Star Citizen.
 
-[![npm version](https://img.shields.io/npm/v/@regolithco/common)](https://www.npmjs.com/package/@regolithco/common)
+[![npm version](https://img.shields.io/npm/v/@salvage-tracker/common)](https://www.npmjs.com/package/@salvage-tracker/common)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
 ```bash
-npm install @regolithco/common
+npm install @salvage-tracker/common
 # or
-yarn add @regolithco/common
+yarn add @salvage-tracker/common
 ```
 
 ## Overview

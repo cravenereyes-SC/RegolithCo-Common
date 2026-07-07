@@ -1,4 +1,4 @@
-# Contributing to RegolithCo-Common
+# Contributing to Salvage Tracker
 
 First off, thank you for considering contributing to our project. We appreciate your time and effort!
 

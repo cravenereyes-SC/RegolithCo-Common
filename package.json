@@ -1,11 +1,11 @@
 {
-  "name": "@regolithco/common",
+  "name": "@salvage-tracker/common",
   "version": "1.5.1",
   "main": "dist/index.js",
   "module": "dist_esnext/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RegolithCo/RegolithCo-Common"
+    "url": "https://github.com/SalvageTracker/SalvageTracker"
   },
   "publishConfig": {
     "access": "public"

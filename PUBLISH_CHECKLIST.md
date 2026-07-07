@@ -18,5 +18,5 @@
 
 ## Afterwards:
 
-- [ ] Update the version on the client side to the new version number with `yarn up @regolithco/common@x.x.x`
-- [ ] Update the version on the server side to the new version number with `yarn up @regolithco/common@x.x.x`
+- [ ] Update the version on the client side to the new version number with `yarn up @salvage-tracker/common@x.x.x`
+- [ ] Update the version on the server side to the new version number with `yarn up @salvage-tracker/common@x.x.x`

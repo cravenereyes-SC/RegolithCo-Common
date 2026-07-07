@@ -1,4 +1,4 @@
-import { RefineryMethodEnum, MethodsBonusLookup } from '@regolithco/common'
+import { RefineryMethodEnum, MethodsBonusLookup } from '@salvage-tracker/common'
 import fs from 'fs'
 import path from 'path'
 import * as Papa from 'papaparse'
