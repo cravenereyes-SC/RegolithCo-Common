@@ -1,0 +1,410 @@
+/* Star Citizen Theme - Color System */
+:root {
+  /* Primary Colors - Futuristic Teals & Cyans */
+  --sc-primary-bright: #00d9ff;        /* Bright cyan */
+  --sc-primary-teal: #00b8d4;          /* Rich teal */
+  --sc-primary-dark-teal: #0088a0;     /* Deep teal */
+  
+  /* Secondary Colors - Dark Blues */
+  --sc-secondary-darkest: #0a1628;     /* Deep space black-blue */
+  --sc-secondary-dark: #0f1f3c;        /* Dark blue */
+  --sc-secondary-medium: #1a2f4d;      /* Medium blue */
+  --sc-secondary-light: #2a4166;       /* Light blue */
+  
+  /* Accent Colors */
+  --sc-accent-orange: #ff6600;         /* Bright orange */
+  --sc-accent-gold: #ffa500;           /* Gold accent */
+  --sc-accent-red: #ff3333;            /* Warning red */
+  --sc-accent-green: #00ff88;          /* Success green */
+  
+  /* Neutrals */
+  --sc-neutral-white: #e8eef2;         /* Off-white */
+  --sc-neutral-light: #a8b5c4;         /* Light gray */
+  --sc-neutral-medium: #7a8699;        /* Medium gray */
+  --sc-neutral-dark: #4a5568;          /* Dark gray */
+  
+  /* Gradients */
+  --sc-gradient-primary: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
+  --sc-gradient-dark: linear-gradient(135deg, #0f1f3c 0%, #0a1628 100%);
+  --sc-gradient-accent: linear-gradient(135deg, #ff6600 0%, #ffa500 100%);
+  
+  /* Typography */
+  --sc-font-primary: "Orbitron", "Audiowide", "Courier New", monospace;
+  --sc-font-secondary: "Inter", "Segoe UI", -apple-system, sans-serif;
+  
+  /* Shadows - Neon glow effect */
+  --sc-shadow-glow-cyan: 0 0 10px rgba(0, 217, 255, 0.3), 0 0 20px rgba(0, 217, 255, 0.1);
+  --sc-shadow-glow-orange: 0 0 10px rgba(255, 102, 0, 0.3), 0 0 20px rgba(255, 102, 0, 0.1);
+  --sc-shadow-elevation: 0 10px 30px rgba(0, 0, 0, 0.5);
+  
+  /* Spacing */
+  --sc-spacing-xs: 0.25rem;
+  --sc-spacing-sm: 0.5rem;
+  --sc-spacing-md: 1rem;
+  --sc-spacing-lg: 1.5rem;
+  --sc-spacing-xl: 2rem;
+  --sc-spacing-2xl: 3rem;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0a1628 0%, #0f1f3c 50%, #0a1628 100%);
+  color: var(--sc-neutral-white);
+  font-family: var(--sc-font-secondary);
+  overflow-x: hidden;
+}
+
+/* Typography - Futuristic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sc-font-primary);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sc-primary-bright);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: var(--sc-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--sc-primary-teal);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--sc-primary-teal);
+}
+
+p, body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--sc-neutral-white);
+}
+
+a {
+  color: var(--sc-primary-bright);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  border-bottom-color: var(--sc-primary-bright);
+  text-shadow: var(--sc-shadow-glow-cyan);
+}
+
+/* Buttons - Futuristic Style */
+button, .button {
+  font-family: var(--sc-font-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: var(--sc-spacing-md) var(--sc-spacing-lg);
+  border: 2px solid var(--sc-primary-bright);
+  background: transparent;
+  color: var(--sc-primary-bright);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+button::before,
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--sc-gradient-primary);
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+button:hover,
+.button:hover {
+  left: 0;
+  background: var(--sc-primary-bright);
+  color: var(--sc-secondary-darkest);
+  box-shadow: var(--sc-shadow-glow-cyan);
+  text-shadow: none;
+}
+
+button:active,
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Primary Button Variant */
+button.primary,
+.button.primary {
+  background: var(--sc-gradient-primary);
+  color: var(--sc-secondary-darkest);
+  border-color: var(--sc-primary-bright);
+}
+
+button.primary:hover,
+.button.primary:hover {
+  box-shadow: var(--sc-shadow-glow-cyan), inset 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Accent Button Variant */
+button.accent,
+.button.accent {
+  border-color: var(--sc-accent-orange);
+  color: var(--sc-accent-orange);
+}
+
+button.accent::before,
+.button.accent::before {
+  background: var(--sc-gradient-accent);
+}
+
+button.accent:hover,
+.button.accent:hover {
+  box-shadow: var(--sc-shadow-glow-orange);
+  color: white;
+}
+
+/* Input Fields */
+input, textarea, select {
+  font-family: var(--sc-font-secondary);
+  background: var(--sc-secondary-medium);
+  border: 2px solid var(--sc-primary-teal);
+  color: var(--sc-neutral-white);
+  padding: var(--sc-spacing-md);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--sc-primary-bright);
+  box-shadow: var(--sc-shadow-glow-cyan);
+  background: var(--sc-secondary-light);
+}
+
+input::placeholder {
+  color: var(--sc-neutral-medium);
+}
+
+/* Cards */
+.card {
+  background: var(--sc-secondary-dark);
+  border: 1px solid var(--sc-primary-teal);
+  border-radius: 8px;
+  padding: var(--sc-spacing-lg);
+  box-shadow: var(--sc-shadow-elevation);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--sc-gradient-primary);
+  opacity: 0.5;
+}
+
+.card:hover {
+  border-color: var(--sc-primary-bright);
+  box-shadow: var(--sc-shadow-elevation), var(--sc-shadow-glow-cyan);
+}
+
+/* Navigation */
+nav, .navbar {
+  background: linear-gradient(90deg, var(--sc-secondary-darkest) 0%, var(--sc-secondary-dark) 100%);
+  border-bottom: 2px solid var(--sc-primary-teal);
+  padding: var(--sc-spacing-md) var(--sc-spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--sc-spacing-lg);
+  box-shadow: var(--sc-shadow-elevation);
+}
+
+nav a, .navbar a {
+  color: var(--sc-neutral-white);
+  font-family: var(--sc-font-primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: var(--sc-spacing-sm) var(--sc-spacing-md);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover, .navbar a:hover {
+  color: var(--sc-primary-bright);
+  border-bottom-color: var(--sc-primary-bright);
+  text-shadow: var(--sc-shadow-glow-cyan);
+}
+
+/* Badge/Pill */
+.badge {
+  display: inline-block;
+  padding: var(--sc-spacing-sm) var(--sc-spacing-md);
+  background: var(--sc-secondary-medium);
+  border: 1px solid var(--sc-primary-bright);
+  color: var(--sc-primary-bright);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--sc-font-primary);
+}
+
+.badge.success {
+  border-color: var(--sc-accent-green);
+  color: var(--sc-accent-green);
+}
+
+.badge.warning {
+  border-color: var(--sc-accent-orange);
+  color: var(--sc-accent-orange);
+}
+
+.badge.error {
+  border-color: var(--sc-accent-red);
+  color: var(--sc-accent-red);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--sc-spacing-lg) 0;
+}
+
+thead {
+  background: var(--sc-secondary-medium);
+  border-bottom: 2px solid var(--sc-primary-teal);
+}
+
+th {
+  padding: var(--sc-spacing-md);
+  text-align: left;
+  font-family: var(--sc-font-primary);
+  color: var(--sc-primary-bright);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+td {
+  padding: var(--sc-spacing-md);
+  border-bottom: 1px solid var(--sc-secondary-light);
+}
+
+tbody tr:hover {
+  background: var(--sc-secondary-light);
+  box-shadow: inset 0 0 15px rgba(0, 217, 255, 0.1);
+}
+
+/* Code Blocks */
+code, pre {
+  font-family: "Courier New", monospace;
+  background: var(--sc-secondary-medium);
+  border: 1px solid var(--sc-primary-teal);
+  border-radius: 4px;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  color: var(--sc-accent-green);
+}
+
+pre {
+  padding: var(--sc-spacing-md);
+  overflow-x: auto;
+  color: var(--sc-neutral-white);
+  line-height: 1.4;
+}
+
+pre code {
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* Animations */
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.scan {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.5), transparent);
+  animation: scan-line 3s linear infinite;
+}
+
+/* Utility Classes */
+.text-primary { color: var(--sc-primary-bright); }
+.text-secondary { color: var(--sc-secondary-light); }
+.text-accent { color: var(--sc-accent-orange); }
+.text-muted { color: var(--sc-neutral-medium); }
+
+.bg-primary { background: var(--sc-secondary-dark); }
+.bg-secondary { background: var(--sc-secondary-medium); }
+
+.border-cyan { border-color: var(--sc-primary-bright); }
+.border-teal { border-color: var(--sc-primary-teal); }
+.border-orange { border-color: var(--sc-accent-orange); }
+
+.shadow-glow { box-shadow: var(--sc-shadow-glow-cyan); }
+.shadow-glow-orange { box-shadow: var(--sc-shadow-glow-orange); }

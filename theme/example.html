@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Citizen Theme - Demo</title>
+  <link rel="stylesheet" href="starCitizen.css">
+  <style>
+    body {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section {
+      margin: 3rem 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .demo-block {
+      padding: 2rem;
+      border: 1px solid var(--sc-primary-teal);
+      border-radius: 8px;
+      background: var(--sc-secondary-dark);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#mining">Mining</a>
+    <a href="#loadouts">Loadouts</a>
+    <a href="#crew">Crew Shares</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <h1>Regolith Co.</h1>
+    <p>Star Citizen Mining Companion with Futuristic Theme</p>
+  </section>
+
+  <!-- Typography -->
+  <section class="section">
+    <h2>Typography</h2>
+    <h3>Heading Level 3</h3>
+    <p>This is a body paragraph with the theme applied. Notice the bright cyan accents and dark blue background with futuristic styling throughout.</p>
+    <a href="#">This is a themed link</a>
+  </section>
+
+  <!-- Buttons -->
+  <section class="section">
+    <h2>Buttons</h2>
+    <div class="grid">
+      <div class="demo-block">
+        <h3>Default Button</h3>
+        <button>Standard Button</button>
+      </div>
+      <div class="demo-block">
+        <h3>Primary Button</h3>
+        <button class="primary">Primary Action</button>
+      </div>
+      <div class="demo-block">
+        <h3>Accent Button</h3>
+        <button class="accent">Secondary Action</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inputs -->
+  <section class="section">
+    <h2>Form Elements</h2>
+    <div class="grid">
+      <div class="demo-block">
+        <h3>Text Input</h3>
+        <input type="text" placeholder="Enter text...">
+      </div>
+      <div class="demo-block">
+        <h3>Select Dropdown</h3>
+        <select>
+          <option>Select an option</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+      <div class="demo-block">
+        <h3>Textarea</h3>
+        <textarea placeholder="Enter your message..." rows="4"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="section">
+    <h2>Cards</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Card Title 1</h3>
+        <p>This is a card component with the Star Citizen theme styling. Hover to see the glow effect.</p>
+        <button>Learn More</button>
+      </div>
+      <div class="card">
+        <h3>Card Title 2</h3>
+        <p>Cards have bright cyan borders and dark blue backgrounds, creating a futuristic appearance.</p>
+        <button class="accent">Explore</button>
+      </div>
+      <div class="card">
+        <h3>Card Title 3</h3>
+        <p>The top border has a gradient glow that matches the theme's primary colors.</p>
+        <button class="primary">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="section">
+    <h2>Badges & Pills</h2>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <span class="badge">Info</span>
+      <span class="badge success">Success</span>
+      <span class="badge warning">Warning</span>
+      <span class="badge error">Error</span>
+    </div>
+  </section>
+
+  <!-- Tables -->
+  <section class="section">
+    <h2>Tables</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Mineral</th>
+          <th>Density</th>
+          <th>Value</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Taranite</td>
+          <td>3.14 g/cm³</td>
+          <td>$450</td>
+          <td><span class="badge success">Available</span></td>
+        </tr>
+        <tr>
+          <td>Hematite</td>
+          <td>5.30 g/cm³</td>
+          <td>$200</td>
+          <td><span class="badge">Common</span></td>
+        </tr>
+        <tr>
+          <td>Quantanium</td>
+          <td>8.50 g/cm³</td>
+          <td>$1500</td>
+          <td><span class="badge warning">Rare</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Code -->
+  <section class="section">
+    <h2>Code Blocks</h2>
+    <pre><code>// Example TypeScript code
+interface MiningLoadout {
+  cargo: number;
+  efficiency: number;
+  durability: string;
+}
+
+const optimizeLoadout = (loadout: MiningLoadout) => {
+  return {
+    ...loadout,
+    efficiency: loadout.efficiency * 1.2
+  };
+};</code></pre>
+  </section>
+
+  <!-- Color Palette -->
+  <section class="section">
+    <h2>Color Palette</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+      <div class="demo-block" style="background: var(--sc-primary-bright); color: var(--sc-secondary-darkest);">
+        <strong>Bright Cyan</strong><br>#00d9ff
+      </div>
+      <div class="demo-block" style="background: var(--sc-primary-teal);">
+        <strong>Rich Teal</strong><br>#00b8d4
+      </div>
+      <div class="demo-block" style="background: var(--sc-secondary-dark);">
+        <strong>Dark Blue</strong><br>#0f1f3c
+      </div>
+      <div class="demo-block" style="background: var(--sc-accent-orange); color: var(--sc-secondary-darkest);">
+        <strong>Orange</strong><br>#ff6600
+      </div>
+      <div class="demo-block" style="background: var(--sc-accent-green); color: var(--sc-secondary-darkest);">
+        <strong>Success Green</strong><br>#00ff88
+      </div>
+      <div class="demo-block" style="background: var(--sc-accent-red);">
+        <strong>Error Red</strong><br>#ff3333
+      </div>
+    </div>
+  </section>
+
+  <!-- Animations -->
+  <section class="section">
+    <h2>Animations</h2>
+    <div class="grid">
+      <div class="demo-block">
+        <h3 class="glow">Glowing Title</h3>
+        <p>Hover over elements to see glow effects</p>
+      </div>
+      <div class="demo-block scan">
+        <h3>Scan Line Effect</h3>
+        <p>This element has an animated scan line</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--sc-primary-teal); padding-top: 2rem; margin-top: 4rem;">
+    <p style="color: var(--sc-neutral-medium);">Star Citizen Theme for Regolith Co. © 2026</p>
+  </section>
+</body>
+</html>
